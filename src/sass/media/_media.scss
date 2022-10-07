@@ -31,6 +31,16 @@
             text-align: center;
         }
     }
+    .carousel {
+        .prev, .next {
+            display: none;
+        }
+    }
+    .tns-item {
+        img {
+            width: 100%;
+        }
+    }
 
 } 
 

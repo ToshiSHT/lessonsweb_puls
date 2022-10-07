@@ -1,11 +1,25 @@
-$(document).ready(function(){
-    $('.carousel__inner').slick({
-        speed: 1200,
-        slidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/prev.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/next.svg"></button>'
-
-      });
-});
+const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    center: true,
+    controls: false,
+    navPosition: 'bottom',
+    responsive: {
+        320:{
+            nav: true,
+            edgePadding: 20,
+            gutter: 20,
+        },
+        900: {
+          nav: false
+        }
+      }
+  });
+  document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+  });
+  document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
+  });
