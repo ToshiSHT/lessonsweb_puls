@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Museo Sans Cyrl';
     src: local('../fonts/MuseoSansCyryl-300'), local('MuseoSansCyryl-300'),
-        url('../fonts/MuseoSansCyryl-300.eot') format('eot'),
-        url('../fonts/MuseoSansCyryl-300.woff') format('woff'),
-        url('../fonts/MuseoSansCyryl-300.ttf') format('truetype');
+        url('../fonts/MuseoSansCyrl-300.eot') format('eot'),
+        url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
     font-weight: 300;
     font-style: light;
     font-display: swap;
@@ -11,9 +11,9 @@
 @font-face {
     font-family: 'Museo Sans Cyrl';
     src: local('../fonts/MuseoSansCyryl-500'), local('MuseoSansCyryl-500'),
-        url('../fonts/MuseoSansCyryl-500.eot') format('eot'),
-        url('../fonts/MuseoSansCyryl-500.woff') format('woff'),
-        url('../fonts/MuseoSansCyryl-500.ttf') format('truetype');
+        url('../fonts/MuseoSansCyrl-500.eot') format('eot'),
+        url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
     font-weight: 500;
     font-style: medium;
     font-display: swap;
@@ -22,9 +22,9 @@
 @font-face {
     font-family: 'Museo Sans Cyrl';
     src: local('../fonts/MuseoSansCyryl-900'), local('MuseoSansCyryl-900'),
-        url('../fonts/MuseoSansCyryl-900.eot') format('eot'),
-        url('../fonts/MuseoSansCyryl-900.woff') format('woff'),
-        url('../fonts/MuseoSansCyryl-900.ttf') format('truetype');
+        url('../fonts/MuseoSansCyrl-900.eot') format('eot'),
+        url('../fonts/MuseoSansCyrl-900.woff') format('woff'),
+        url('../fonts/MuseoSansCyry-900.ttf') format('truetype');
     font-weight: 900;
     font-style: bold;
     font-display: swap;
@@ -33,9 +33,9 @@
 @font-face {
     font-family: 'Museo Sans Cyrl';
     src: local('../fonts/MuseoSansCyryl-700'), local('MuseoSansCyryl-700'),
-        url('../fonts/MuseoSansCyryl-700.eot') format('eot'),
-        url('../fonts/MuseoSansCyryl-700.woff') format('woff'),
-        url('../fonts/MuseoSansCyryl-700.ttf') format('truetype');
+        url('../fonts/MuseoSansCyrl-700.eot') format('eot'),
+        url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
     font-weight: 700;
     font-style: bold;
     font-display: swap;
