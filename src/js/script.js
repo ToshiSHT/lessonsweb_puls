@@ -55,3 +55,81 @@ function toggleCart (toggleLink) {
 }
 toggleCart (itemLink);
 toggleCart (backLink);
+
+//modal
+
+
+document.querySelectorAll('[data-modal="consultation"]').forEach(item => {
+    item.addEventListener('click', (e) => {
+      document.querySelector('#consultation').classList.add('modal_show');
+      document.querySelector('.overlay').classList.add('overlay_show');
+    });
+});
+
+document.querySelectorAll('.modal__close').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault;
+        document.querySelector('#consultation').classList.remove('modal_show');
+        document.querySelector('#order').classList.remove('modal_show');
+        document.querySelector('#thanks').classList.remove('modal_show');
+        document.querySelector('.overlay').classList.remove('overlay_show');
+    });
+});
+ 
+document.querySelectorAll('.button_mini').forEach((item,i) => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault;
+        document.querySelector('#order .modal__subtitle').textContent = document.querySelectorAll('.catalog-item__subtitle')[i].textContent; 
+        document.querySelector('#order').classList.add('modal_show');
+        document.querySelector('.overlay').classList.add('overlay_show');
+
+    });
+});
+
+//validate
+
+let validateForm = function (selector) {
+    const validate = new window.JustValidate(selector/* , {
+       errorFieldCssClass: 'is-invalid',
+        errorFieldStyle: {
+          border: '1px solid red',
+        },
+        errorLabelCssClass: 'is-label-invalid',
+        errorLabelStyle: {
+          color: 'red',
+          textDecoration: 'underlined',
+        },
+        focusInvalidField: true,
+        lockForm: true,
+        tooltip: {
+          position: 'top',
+        }
+    }  */);
+    validate
+        .addField('.feed-form__name', [
+        {
+            rule: 'required',
+            errorMessage: 'Это поле обязательно',
+          }])
+
+        .addField('.feed-form__phone', [
+        {
+            rule: 'required',
+            errorMessage: 'Это поле обязательно',
+          }])
+
+        .addField('.feed-form__email',[
+            {
+              rule: 'required',
+              errorMessage: 'Это поле обязательно',
+            },
+            {
+              rule: 'email',
+              errorMessage: 'Неверный адресс почты',
+            },
+          ]);
+}
+
+validateForm ('.consultation form');
+validateForm ('#consultation form');
+validateForm ('#order form');

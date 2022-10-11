@@ -237,6 +237,13 @@
         &__info {
             width: 320px;
         }
+    }
+    .modal {
+        &__close {
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+        }
     }   
 
     
