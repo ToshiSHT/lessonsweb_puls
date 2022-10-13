@@ -65,16 +65,29 @@ document.querySelectorAll('[data-modal="consultation"]').forEach(item => {
       document.querySelector('.overlay').classList.add('overlay_show');
     });
 });
-
-document.querySelectorAll('.modal__close').forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault;
-        document.querySelector('#consultation').classList.remove('modal_show');
+function closeModal (){
+    document.querySelector('#consultation').classList.remove('modal_show');
         document.querySelector('#order').classList.remove('modal_show');
         document.querySelector('#thanks').classList.remove('modal_show');
         document.querySelector('.overlay').classList.remove('overlay_show');
+        document.querySelectorAll('.feed-form').forEach(item => {
+            item.reset();
+        })
+};
+document.querySelectorAll('.modal__close').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault;
+        closeModal();
     });
 });
+/* document.querySelector('.overlay').addEventListener('click', e => {
+    e.preventDefault;
+    if ( !(e.target === document.querySelectorAll('.modal'))) {
+        closeModal();
+    }
+    
+
+}); */
  
 document.querySelectorAll('.button_mini').forEach((item,i) => {
     item.addEventListener('click', (e) => {
@@ -89,22 +102,12 @@ document.querySelectorAll('.button_mini').forEach((item,i) => {
 //validate
 
 let validateForm = function (selector) {
-    const validate = new window.JustValidate(selector/* , {
-       errorFieldCssClass: 'is-invalid',
-        errorFieldStyle: {
-          border: '1px solid red',
-        },
-        errorLabelCssClass: 'is-label-invalid',
-        errorLabelStyle: {
-          color: 'red',
-          textDecoration: 'underlined',
-        },
-        focusInvalidField: true,
-        lockForm: true,
-        tooltip: {
-          position: 'top',
-        }
-    }  */);
+    const validate = new window.JustValidate(selector, {
+        errorLabelCssClass: 'error_Label',
+        errorLabelStyle: {},
+        errorFieldCssClass: 'error_Field',
+    }
+    );
     validate
         .addField('.feed-form__name', [
         {
@@ -127,9 +130,64 @@ let validateForm = function (selector) {
               rule: 'email',
               errorMessage: 'Неверный адресс почты',
             },
-          ]);
-}
+          ])
 
+          document.querySelectorAll('.modal__close').forEach((item,i) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault;
+                validate.refresh();
+        
+            });
+            })
+          
+        
+        };
 validateForm ('.consultation form');
 validateForm ('#consultation form');
 validateForm ('#order form');
+
+
+document.querySelectorAll('.feed-form__phone').forEach(item => {
+Inputmask({"mask": "+7 (999) 999-9999"}).mask(item);
+});
+
+//send mail
+
+document.querySelectorAll('form').forEach(item => {
+    item.addEventListener('submit', sendForm);
+    async function sendForm (e) {
+       e.preventDefault;
+       let formData = new FormData(item);
+       console.log(item);
+       let response = await fetch('mailer/smart.php', {
+           method: 'POST',
+           body: formData
+       });
+       console.log(response.ok);
+       if (response.ok) {
+                item.reset();
+                closeModal();
+                document.querySelector('#thanks').classList.add('modal_show');
+                document.querySelector('.overlay').classList.add('overlay_show');
+       } else {
+           alert('ошибка')
+
+       }
+    }
+}); 
+
+// button up
+const pageup =document.querySelector('.pageup')
+
+window.addEventListener('scroll', (e) => {
+     if (window.pageYOffset > 1600) {
+        pageup.classList.add('pageup_show');
+     } else{
+        pageup.classList.remove('pageup_show');
+     }
+});
+pageup.addEventListener('click', e => {
+    document.querySelector('#up').scrollIntoView({block: "center", behavior: "smooth"})
+
+});
+

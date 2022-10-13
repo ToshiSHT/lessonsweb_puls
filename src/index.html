@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
            <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -52,9 +52,9 @@
         </div>
            </div> 
     </section>
-    <section class="advantages">
+    <section class="advantages" >
         <div class="container">
-            <div class="title">НАШИ ПРЕИМУЩЕСТВА</div>
+            <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__items">
                 <div class="advantages__item">
                     <img src="icons/cup.png" alt="cup">
@@ -79,14 +79,20 @@
             <h2 class="title title_left">Получите бесплатную консультацию<br>по подбору пульсометра </h2>
             <div class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form" action="#">
-                <input name="name" class="feed-form__name" required placeholder="Ваше имя" type="text">
-                <input  name="phone" class="feed-form__phone" required placeholder="Ваш телефон" type="number">
+                <div class="feed-form__input-box">
+                    <input name="name" class="feed-form__name" required placeholder="Ваше имя" type="text">
+                </div>
+            <div class="feed-form__input-box">  <input  name="phone" class="feed-form__phone" required placeholder="Ваш телефон" >
+            </div>
+             <div class="feed-form__input-box">
                 <input name="email" class="feed-form__email" required placeholder="Ваш E-mail" type="email">
+             </div>
+                
                 <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -102,7 +108,7 @@
               <button class="prev"><img src="icons/prev.svg" alt="prev"></button>
               <button class="next"><img src="icons/next.svg" alt="next"></button>
         </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
@@ -120,13 +126,14 @@
                     <div class="catalog-item_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
-                        <ul class="catalog-item__list ">
+                            <ul class="catalog-item__list">
                             <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
+                            </ul>
+                            
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -150,7 +157,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -175,7 +182,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -200,7 +207,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -225,7 +232,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -250,7 +257,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -277,7 +284,7 @@
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">назад</a>
+                            <li><a href="#" class="catalog-item__back">назад</a></li>
                         </ul>
                     </div>
                     <hr>
@@ -392,9 +399,14 @@
             <div class="modal__title">Просто заполните форму заявки</div>
             <div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name"  class="feed-form__name" required placeholder="Ваше имя" type="text">
-                <input  name="phone"  class="feed-form__phone" required placeholder="Ваш телефон" type="number">
-                <input name="email"  class="feed-form__email" required placeholder="Ваш E-mail" type="email">
+                <div class="feed-form__input-box">
+                    <input name="name" class="feed-form__name" required placeholder="Ваше имя" type="text">
+                </div>
+            <div class="feed-form__input-box">  <input  name="phone" class="feed-form__phone" required placeholder="Ваш телефон" >
+            </div>
+             <div class="feed-form__input-box">
+                <input name="email" class="feed-form__email" required placeholder="Ваш E-mail" type="email">
+              </div>  
                 <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
@@ -404,9 +416,14 @@
             <div class="modal__title">Ваш заказ:</div>
             <div class="modal__subtitle">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" class="feed-form__name" required placeholder="Ваше имя" type="text">
-                <input  name="phone" class="feed-form__phone" required placeholder="Ваш телефон" type="number">
-                <input name="email"  class="feed-form__email"required placeholder="Ваш E-mail" type="email">
+                <div class="feed-form__input-box">
+                    <input name="name" class="feed-form__name" required placeholder="Ваше имя" type="text">
+                </div>
+            <div class="feed-form__input-box">  <input  name="phone" class="feed-form__phone" required placeholder="Ваш телефон" >
+            </div>
+             <div class="feed-form__input-box">
+                <input name="email" class="feed-form__email" required placeholder="Ваш E-mail" type="email">
+             </div>  
                 <button class="button button_submit">Купить</button>
             </form>
          </div>   
@@ -417,8 +434,12 @@
             <div class="modal__subtitle">Наш менеджер свяжется с вами <br> в ближайшее время!</div>
         </div>
     </div>
+    <div  class="pageup">
+        <img src="icons/circle-chevron-up-solid.svg" alt="up">
+    </div>
     <script src="js/tiny-slider.js"></script>
     <script src="js/just-validate.production.min.js"></script>
+    <script src="js/inputmask.min.js" ></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -9,6 +9,11 @@
     max-width: 950px;
     margin: 0 Auto;
 }
+.gogle__map {
+    width: 100%;
+    height: 630px;
+    border: 0;
+}
 
 
 @import 'blocks/promo';
@@ -24,7 +29,5 @@
 @import 'blocks/reviews';
 @import 'blocks/footer';
 @import 'blocks/modal';
+@import 'blocks/pageup';
 @import 'media/media';
-.show {
-    display: block;
-}
